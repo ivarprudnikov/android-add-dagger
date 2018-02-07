@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.widget.LinearLayout;
 
 import com.ivarprudnikov.customeruploader.R;
@@ -65,7 +64,6 @@ public class SettingsActivity extends AppCompatActivity implements AppSettingsLo
     @Override
     public boolean onLoginFragmentAuthenticate(String candidate) {
         isAuthenticated = mPasswordService.checkCandidate(candidate);
-        Log.d("SettingsActivity", "Is authenticated:" + isAuthenticated);
         return isAuthenticated;
     }
 

@@ -4,49 +4,33 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import com.ivarprudnikov.customeruploader.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class CustomerActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
-    @BindView(R.id.home_content)
-    TextView homeContent;
+    @BindView(R.id.customer_content)
+    TextView customerContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_customer);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        String welcomeKey = getString(R.string.pref_home_welcome_key);
-        String welcomeDefault = getString(R.string.pref_home_welcome_default);
-        homeContent.setText(sharedPref.getString(welcomeKey, welcomeDefault));
-    }
-
-    @OnClick(R.id.fab)
-    public void onClick(View view) {
-        startActivity(new Intent(this, CustomerActivity.class));
+        // TODO get customer
     }
 
     @Override

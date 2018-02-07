@@ -2,7 +2,15 @@
     <string name="app_name">CustomerUploader</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_customer">Customer</string>
+
+    <!-- Settings -->
     <string name="pref_security_pass_key">pref_security_pass_key</string>
     <string name="pref_security_pass_default">foobar</string>
     <string name="pref_security_pass_failed_msg">Invalid password, should be "foobar"</string>
+    <string name="pref_home_category_title">Home screen tweaks</string>
+    <string name="pref_home_welcome_key">welcome</string>
+    <string name="pref_home_welcome_default">Modify me in configuration screen</string>
+    <string name="pref_home_welcome_title">Welcome message</string>
+    <string name="pref_home_welcome_message">Provide short message</string>
 </resources>

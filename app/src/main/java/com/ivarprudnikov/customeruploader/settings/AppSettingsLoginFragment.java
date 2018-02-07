@@ -86,20 +86,20 @@ public class AppSettingsLoginFragment extends DialogFragment {
     }
 
     @OnClick(R.id.buttonCancel)
-    public void onCancelClick(View view){
+    public void onCancelClick(View view) {
         getDialog().dismiss();
         getActivity().finish();
     }
 
     @OnClick(R.id.buttonLogin)
-    public void onLoginClick(View view){
+    public void onLoginClick(View view) {
         if (onAuthenticateListener != null) {
             boolean result = onAuthenticateListener.onLoginFragmentAuthenticate(pass.getText().toString());
             if (result) {
                 message.setVisibility(View.GONE);
                 getDialog().dismiss();
             } else {
-                message.setText(getResources().getString(R.string.pref_security_pass_failed_msg));
+                message.setText(getString(R.string.pref_security_pass_failed_msg));
                 message.setVisibility(View.VISIBLE);
             }
         }
