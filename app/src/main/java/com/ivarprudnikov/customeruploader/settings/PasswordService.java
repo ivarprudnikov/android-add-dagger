@@ -1,9 +1,6 @@
 package com.ivarprudnikov.customeruploader.settings;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import android.text.TextUtils;
 
 import com.ivarprudnikov.customeruploader.R;
 
@@ -22,12 +19,6 @@ public class PasswordService {
     }
 
     private String getCurrentPassword(){
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(ctx);
-        String newPass = sharedPref.getString(ctx.getResources().getString(R.string.pref_security_pass_key), "");
-
-        if(!TextUtils.isEmpty(newPass))
-            return newPass;
-
         return ctx.getResources().getString(R.string.pref_security_pass_default);
     }
 

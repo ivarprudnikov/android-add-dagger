@@ -6,7 +6,6 @@
     <string name="activity_theme_text">Selected theme: %s.\n\nYou can change it in settings</string>
 
     <!-- Settings -->
-    <string name="pref_security_pass_key">pref_security_pass_key</string>
     <string name="pref_security_pass_default">foobar</string>
     <string name="pref_security_pass_failed_msg">Invalid password, should be "foobar"</string>
     <string name="pref_home_category_title">Home screen tweaks</string>
