@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.ivarprudnikov.customeruploader.R;
+import com.ivarprudnikov.customeruploader.settings.Theme;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -30,7 +31,12 @@ public class CustomerActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-        // TODO get customer
+
+        String themeLabel = sharedPref.getString(getString(R.string.pref_customer_theme_key), Theme.DEFAULT.getLabel());
+        Theme theme = Theme.fromLabel(themeLabel);
+        customerContent.setText(theme.getLabel());
+        customerContent.setBackgroundColor(theme.getBackgroundHex());
+        customerContent.setTextColor(theme.getForegroundHex());
     }
 
     @Override

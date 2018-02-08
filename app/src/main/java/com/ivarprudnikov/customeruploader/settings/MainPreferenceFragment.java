@@ -3,6 +3,7 @@ package com.ivarprudnikov.customeruploader.settings;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
+import android.preference.ListPreference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
@@ -18,17 +19,31 @@ public class MainPreferenceFragment extends PreferenceFragment implements Shared
         PreferenceScreen screen = getPreferenceManager().createPreferenceScreen(getActivity());
         setPreferenceScreen(screen);
 
-        PreferenceCategory category = new PreferenceCategory(screen.getContext());
-        category.setTitle(getString(R.string.pref_home_category_title));
-        screen.addPreference(category);
+        PreferenceCategory homeScreenCategory = new PreferenceCategory(screen.getContext());
+        homeScreenCategory.setTitle(getString(R.string.pref_home_category_title));
+        screen.addPreference(homeScreenCategory);
 
         EditTextPreference greeting = new EditTextPreference(screen.getContext());
         greeting.setKey(getString(R.string.pref_home_welcome_key));
         greeting.setDialogTitle(R.string.pref_home_welcome_title);
         greeting.setTitle(R.string.pref_home_welcome_title);
         greeting.setDialogMessage(R.string.pref_home_welcome_message);
-        greeting.setDefaultValue(R.string.pref_home_welcome_default);
-        category.addPreference(greeting);
+        greeting.setDefaultValue(getString(R.string.pref_home_welcome_default));
+        homeScreenCategory.addPreference(greeting);
+
+        PreferenceCategory customerScreenCategory = new PreferenceCategory(screen.getContext());
+        customerScreenCategory.setTitle(getString(R.string.pref_customer_category_title));
+        screen.addPreference(customerScreenCategory);
+
+        ListPreference theme = new ListPreference(screen.getContext());
+        theme.setKey(getString(R.string.pref_customer_theme_key));
+        theme.setTitle(R.string.pref_customer_theme_title);
+        theme.setDialogTitle(R.string.pref_customer_theme_title);
+        theme.setEntries(Theme.getLabels());
+        theme.setEntryValues(Theme.getLabels());
+        theme.setDefaultValue(Theme.DEFAULT.getLabel());
+        customerScreenCategory.addPreference(theme);
+
 
         onSharedPreferenceChanged(null, "");
     }
@@ -48,8 +63,12 @@ public class MainPreferenceFragment extends PreferenceFragment implements Shared
     @Override
     public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
         EditTextPreference pref = (EditTextPreference) findPreference(getString(R.string.pref_home_welcome_key));
-        pref.setSummary("dummy"); // required or will not update
+        pref.setSummary("dummy");
         pref.setSummary(pref.getText());
+
+        ListPreference pref2 = (ListPreference) findPreference(getString(R.string.pref_customer_theme_key));
+        pref2.setSummary("dummy");
+        pref2.setSummary(pref2.getValue());
     }
 
 }

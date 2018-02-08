@@ -13,4 +13,8 @@
     <string name="pref_home_welcome_default">Modify me in configuration screen</string>
     <string name="pref_home_welcome_title">Welcome message</string>
     <string name="pref_home_welcome_message">Provide short message</string>
+
+    <string name="pref_customer_category_title">Customer tweaks</string>
+    <string name="pref_customer_theme_key">theme</string>
+    <string name="pref_customer_theme_title">Theme</string>
 </resources>
