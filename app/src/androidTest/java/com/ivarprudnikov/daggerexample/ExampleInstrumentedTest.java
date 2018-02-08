@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader;
+package com.ivarprudnikov.daggerexample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ivarprudnikov.customeruploader", appContext.getPackageName());
+        assertEquals("com.ivarprudnikov.daggerexample", appContext.getPackageName());
     }
 }

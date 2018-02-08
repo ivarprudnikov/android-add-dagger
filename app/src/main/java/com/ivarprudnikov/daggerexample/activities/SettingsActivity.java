@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader.activities;
+package com.ivarprudnikov.daggerexample.activities;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.LinearLayout;
 
-import com.ivarprudnikov.customeruploader.R;
-import com.ivarprudnikov.customeruploader.settings.AppSettingsLoginFragment;
-import com.ivarprudnikov.customeruploader.settings.MainPreferenceFragment;
-import com.ivarprudnikov.customeruploader.settings.PasswordService;
+import com.ivarprudnikov.daggerexample.R;
+import com.ivarprudnikov.daggerexample.settings.AppSettingsLoginFragment;
+import com.ivarprudnikov.daggerexample.settings.MainPreferenceFragment;
+import com.ivarprudnikov.daggerexample.settings.PasswordService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

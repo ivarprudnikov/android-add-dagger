@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader.settings;
+package com.ivarprudnikov.daggerexample.settings;
 
 public enum Theme {
     DEFAULT("Default", 0xFFFFFFFF, 0xFF333333),

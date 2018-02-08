@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader;
+package com.ivarprudnikov.daggerexample;
 
 import org.junit.Test;
 

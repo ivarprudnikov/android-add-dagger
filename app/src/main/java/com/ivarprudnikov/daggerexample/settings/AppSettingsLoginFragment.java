@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader.settings;
+package com.ivarprudnikov.daggerexample.settings;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ivarprudnikov.customeruploader.R;
+import com.ivarprudnikov.daggerexample.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ivarprudnikov.customeruploader">
+    package="com.ivarprudnikov.daggerexample">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.ivarprudnikov.daggerexample.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -19,12 +19,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.ThemeActivity"
+            android:name="com.ivarprudnikov.daggerexample.activities.ThemeActivity"
             android:exported="false"
             android:label="@string/title_activity_theme">
         </activity>
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="com.ivarprudnikov.daggerexample.activities.SettingsActivity"
             android:exported="false"
             android:label="@string/title_activity_settings">
             <intent-filter>

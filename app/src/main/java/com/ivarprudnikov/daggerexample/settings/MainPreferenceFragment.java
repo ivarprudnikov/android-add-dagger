@@ -1,4 +1,4 @@
-package com.ivarprudnikov.customeruploader.settings;
+package com.ivarprudnikov.daggerexample.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 
-import com.ivarprudnikov.customeruploader.R;
+import com.ivarprudnikov.daggerexample.R;
 
 public class MainPreferenceFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener {
 
