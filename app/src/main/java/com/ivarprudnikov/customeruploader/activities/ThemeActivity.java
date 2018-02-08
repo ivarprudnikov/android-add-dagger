@@ -15,7 +15,7 @@ import com.ivarprudnikov.customeruploader.settings.Theme;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class CustomerActivity extends AppCompatActivity {
+public class ThemeActivity extends AppCompatActivity {
 
     @BindView(R.id.customer_content)
     TextView customerContent;
@@ -34,7 +34,7 @@ public class CustomerActivity extends AppCompatActivity {
 
         String themeLabel = sharedPref.getString(getString(R.string.pref_customer_theme_key), Theme.DEFAULT.getLabel());
         Theme theme = Theme.fromLabel(themeLabel);
-        customerContent.setText(theme.getLabel());
+        customerContent.setText(getString(R.string.activity_theme_text, theme.getLabel()));
         customerContent.setBackgroundColor(theme.getBackgroundHex());
         customerContent.setTextColor(theme.getForegroundHex());
     }

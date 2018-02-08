@@ -1,7 +1,7 @@
 package com.ivarprudnikov.customeruploader.settings;
 
 public enum Theme {
-    DEFAULT("Default", 0xFF117bf3, 0xFFFFFFFF),
+    DEFAULT("Default", 0xFFFFFFFF, 0xFF333333),
     RED("Red", 0xFFf31111, 0xFFFFFFFF),
     GREEN("Green", 0xFF5fba7d, 0xFFFFFFFF);
 

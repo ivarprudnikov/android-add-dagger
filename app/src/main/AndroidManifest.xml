@@ -19,9 +19,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.CustomerActivity"
+            android:name=".activities.ThemeActivity"
             android:exported="false"
-            android:label="@string/title_activity_customer">
+            android:label="@string/title_activity_theme">
         </activity>
         <activity
             android:name=".activities.SettingsActivity"

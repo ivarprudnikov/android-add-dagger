@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">CustomerUploader</string>
+    <string name="app_name">Dagger integration</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="title_activity_customer">Customer</string>
+    <string name="title_activity_theme">Theme preview</string>
+    <string name="activity_theme_text">Selected theme: %s.\n\nYou can change it in settings</string>
 
     <!-- Settings -->
     <string name="pref_security_pass_key">pref_security_pass_key</string>
@@ -10,11 +11,11 @@
     <string name="pref_security_pass_failed_msg">Invalid password, should be "foobar"</string>
     <string name="pref_home_category_title">Home screen tweaks</string>
     <string name="pref_home_welcome_key">welcome</string>
-    <string name="pref_home_welcome_default">Modify me in configuration screen</string>
+    <string name="pref_home_welcome_default">Modify me in settings</string>
     <string name="pref_home_welcome_title">Welcome message</string>
     <string name="pref_home_welcome_message">Provide short message</string>
 
-    <string name="pref_customer_category_title">Customer tweaks</string>
+    <string name="pref_customer_category_title">Theme screen tweaks</string>
     <string name="pref_customer_theme_key">theme</string>
     <string name="pref_customer_theme_title">Theme</string>
 </resources>

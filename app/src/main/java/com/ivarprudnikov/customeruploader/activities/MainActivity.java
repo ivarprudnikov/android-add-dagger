@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab)
     public void onClick(View view) {
-        startActivity(new Intent(this, CustomerActivity.class));
+        startActivity(new Intent(this, ThemeActivity.class));
     }
 
     @Override
