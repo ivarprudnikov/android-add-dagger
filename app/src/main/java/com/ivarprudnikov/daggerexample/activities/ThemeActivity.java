@@ -1,9 +1,7 @@
 package com.ivarprudnikov.daggerexample.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,16 +10,23 @@ import android.widget.TextView;
 import com.ivarprudnikov.daggerexample.R;
 import com.ivarprudnikov.daggerexample.settings.Theme;
 
+import javax.inject.Inject;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import dagger.android.AndroidInjection;
 
 public class ThemeActivity extends AppCompatActivity {
 
     @BindView(R.id.customer_content)
     TextView customerContent;
 
+    @Inject
+    Theme theme;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer);
         ButterKnife.bind(this);
@@ -30,10 +35,6 @@ public class ThemeActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
-
-        String themeLabel = sharedPref.getString(getString(R.string.pref_customer_theme_key), Theme.DEFAULT.getLabel());
-        Theme theme = Theme.fromLabel(themeLabel);
         customerContent.setText(getString(R.string.activity_theme_text, theme.getLabel()));
         customerContent.setBackgroundColor(theme.getBackgroundHex());
         customerContent.setTextColor(theme.getForegroundHex());
