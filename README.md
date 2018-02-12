@@ -6,4 +6,4 @@ Android add Dagger 2
 | [![Build Status](https://travis-ci.org/ivarprudnikov/android-add-dagger.svg?branch=master)](https://travis-ci.org/ivarprudnikov/android-add-dagger) |
 
 - Before dagger - https://github.com/ivarprudnikov/android-add-dagger/tree/v1
-- Before dagger - https://github.com/ivarprudnikov/android-add-dagger/tree/v2
+- After dagger - https://github.com/ivarprudnikov/android-add-dagger/tree/v2
