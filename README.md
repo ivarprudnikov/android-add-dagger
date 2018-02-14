@@ -7,3 +7,5 @@ Android add Dagger 2
 
 - Before dagger - https://github.com/ivarprudnikov/android-add-dagger/tree/v1
 - After dagger - https://github.com/ivarprudnikov/android-add-dagger/tree/v2
+
+![AppComponent](preview.png)
